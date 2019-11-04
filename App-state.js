@@ -17,12 +17,19 @@ constructor(props){
 //myname="Elmar"
 //mygender="male"
 
+
   componentDidMount () {
     console.log('........my component did mount')
+    state={
+      mytitle: "Bye",
+      }
   }
 
 
 	render(){
+   /* this.setState={
+      mytitle : "Shahriyar"   
+    }*/
     // const { mytitle, myname, mygender } = this;
     // const data = { mytitle, myname, mygender};
 

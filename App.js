@@ -1,33 +1,25 @@
-import React, {Component} from 'react';
-import Myfunc from './components/somefunc';
+import React, { Component } from 'react';
+import {h, w} from './components/moikonstanti'
+import {Somefunc1} from './components/'
 
 
-export default class App extends Component {
-constructor(props){
- super(props)  
-  
- this.state={
-  mytitle: "Hello",
-  myname : "Elmar",
-  mygender : "male"
- }
-}
-  //data = { message: "asdaewaq" };
-//mytitle="Hello"
-//myname="Elmar"
-//mygender="male"
 
-  componentDidMount () {
-    console.log('........my component did mount')
+export default class FlexDirectionBasics extends Component {
+ 
+  componentDidMount() {
+   
+    console.log("width="+h+"hight="+w)
   }
+  
 
-
-	render(){
-    // const { mytitle, myname, mygender } = this;
-    // const data = { mytitle, myname, mygender};
-
-		return (
-      <Myfunc data={{...this.state}} />
-	  )
-  } 
-}
+  render() {
+    
+    
+    return (
+      // Try setting `flexDirection` to `column`.
+      
+     <Somefunc1/>   
+        
+    )
+  }
+};

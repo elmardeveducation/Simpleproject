@@ -2,19 +2,22 @@ import React from 'react'
 import {StyleSheet, View, Alert, Text, TouchableOpacity} from 'react-native'
 
 const Myfunc = props => {
+    const {data}= props
+    console.log(data)
 
 
 //console.log(props.mytitle) + console.log(props.myname) +console.log(props.mygender)
- const { data } = props;
+ //const { data } = props;
 
 
 return(<View style={styles.container}>
           <View>
           <Text style={styles.buttonText}>{data.mytitle}</Text>
-            <Text style={styles.buttonText}>{data.myname}</Text>
+            <Text style={styles.buttonText}>{data.mygender}</Text>
+            
             <TouchableOpacity style={styles.button}  
                 onPress={() =>console.log("Button pressed")}>  
-                  <Text style={styles.buttonText}>{data.mygender}</Text>
+                  <Text style={styles.buttonText}>{data.myname}</Text>
                   
             </TouchableOpacity>
           </View>
