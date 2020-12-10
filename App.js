@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, TouchableOpacity, Alert, View} from 'react-native';
-import Myfunc from './components/somefunc';
+import {Somefunc1, Myfunc} from './components';
 
 
 export default class App extends Component {
@@ -10,7 +10,8 @@ constructor(props){
  this.state={
   mytitle: "Hello",
   myname : "Elmar",
-  mygender : "male"
+  mygender : "male",
+  secure: false,
  }
 }
   //data = { message: "asdaewaq" };
@@ -33,19 +34,11 @@ constructor(props){
 
 
 	render(){
-   /* this.setState={
-      mytitle : "Shahriyar"   
-    }*/
-    // const { mytitle, myname, mygender } = this;
-    // const data = { mytitle, myname, mygender};
-
 		return (
       <View style={{flex:1}}>
         <Button title="Test" onPress={this.Myclick}/>
       <Myfunc data={{...this.state}}/>
-
-     
-    
+      <Myfunc myvariable={{name: "Eldar"}}/>
       </View>
 
 
